@@ -4,7 +4,7 @@ import { NextRequest } from "next/server";
 export const revalidate = 0;
 
 export async function GET(req: NextRequest) {
-  const url = process.env.API_URL + "/users";
+  const url = process.env.API_URL + "/users/me";
   const token = await getToken({ req });
   if (token?.access_token) {
     const headers: HeadersInit = new Headers();

@@ -13,7 +13,7 @@ export default function UsersList(props: UsersListProps) {
     <ul>
       {users.map((user) => (
         <li key={user.email}>
-          {user.email} ({user.roles.join(", ")})
+          {user.name} - {user.email} - ({user.roles.join(", ")})
         </li>
       ))}
     </ul>
